@@ -30,13 +30,49 @@ export default class SingleRoom extends Component {
             </div>
         }
 
-        const {name, description, capacity, size,price, extras, breakfast, pets, images} = room
+        const {name, description, capacity, size,price, extras, breakfast, pets, images} = room;
+        const [mainImg, ...defaultImg] = images;
         return (
-            <StyledHero img={images[0] || this.state.defaultBcg}>
+            <>
+            <StyledHero img={mainImg || this.state.defaultBcg}>
                 <Banner title={`${name} room`} />
                 <Link to='/rooms' className="btn-primary">Назад</Link>
 
             </StyledHero>
+            <section className="single-room">
+                <div className="single-room-images">
+                {defaultImg.map((item, index) => {
+                   return <img key={index} src={item} alt={name} />
+                })}
+                </div>
+                <div className="single-room-info">
+                    <article className="desc">
+                        <h3>Подробнее</h3>
+                        <p>{description}</p>
+                        </article>
+                        <article className="info">
+                            <h3>Инфо</h3>
+                            <h6>Цена : ${price}</h6>
+                            <h6>Размер : {size} SQFT</h6>
+                            <h6>Количество : {capacity > 1 ?`${capacity} человек` : `${capacity} людей`}</h6>
+                           
+                            <h6>Что есть : {extras}</h6>
+                            
+                            <h6> {pets ? "C животными" : "Без животных"}</h6>
+                            <h6> {breakfast ? "Охуенный хавчик" : "Петушки ебаные вы все"}</h6>
+                            
+                        </article>
+                </div>
+            </section>
+            <section className="room-extrass">  
+                <h6>Включено</h6>
+                <ul className="extrass">
+                    {extras.map((item, index) => {
+                        return <li key={index}>- {item} </li>
+                    })}
+                </ul>
+            </section>
+            </>
         )
         
     }

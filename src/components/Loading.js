@@ -1,9 +1,10 @@
 import React from 'react'
+import defaultImg from '../images/gif/loading-arrow.gif'
 
 export default function Loading() {
     return (
         <div>
-           <img src="./images/gif/loading.gif"/>
+           <img src={defaultImg}/>
         </div>
     )
 }
