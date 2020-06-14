@@ -4,20 +4,21 @@ import Banner from '../components/Banner'
 import {Link} from 'react-router-dom'
 import Services from '../components/Services'
 import FeaturedRooms from '../components/FeaturedRooms'
+import StyledFooter from '../components/StyledFooter'
 
 
 export default function Home() {
     return (
         <>
         <Hero>
-            <Banner title="REAL Tours" subtitle="deluxe rooms starting at $299" >
-                <Link to='/rooms' className="btn-primary">Our Tours</Link>
+            <Banner title="REAL Tours" subtitle="Выгодные предложения" >
+                <Link to='/rooms' className="btn-primary">Наши Шаблоны</Link>
             </Banner>    
          </Hero> 
 
          <Services />
          <FeaturedRooms />
-         
+         <StyledFooter />
         </>
     )
 }

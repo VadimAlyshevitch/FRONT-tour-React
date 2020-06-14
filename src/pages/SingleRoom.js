@@ -35,8 +35,9 @@ export default class SingleRoom extends Component {
         return (
             <>
             <StyledHero img={mainImg || this.state.defaultBcg}>
-                <Banner title={`${name} room`} />
-                <Link to='/rooms' className="btn-primary">Назад</Link>
+                <Banner title={`${name}`} >
+                    <Link to='/rooms' className="btn-primary">Назад</Link>
+                </Banner>
 
             </StyledHero>
             <section className="single-room">
@@ -52,25 +53,20 @@ export default class SingleRoom extends Component {
                         </article>
                         <article className="info">
                             <h3>Инфо</h3>
-                            <h6>Цена : ${price}</h6>
-                            <h6>Размер : {size} SQFT</h6>
-                            <h6>Количество : {capacity > 1 ?`${capacity} человек` : `${capacity} людей`}</h6>
+                            <h6><b>Итого</b> : {price} рублей</h6>
                            
-                            <h6>Что есть : {extras}</h6>
+                            <h6> <b>Количество</b> : {capacity > 1 ?`${capacity} человека` : `${capacity} человек`}</h6>
+                            <h6> <b>Отель</b> : {pets}</h6>
+                            <h6> <b>Цена за сутки </b>: {size} рублей</h6>
                             
-                            <h6> {pets ? "C животными" : "Без животных"}</h6>
-                            <h6> {breakfast ? "Охуенный хавчик" : "Петушки ебаные вы все"}</h6>
+                            <h6> <b>Что посетить </b>: {breakfast }</h6>
+                            <h6> <b>Какие события</b> : {extras}</h6>
+                            
+                            
+                            
                             
                         </article>
                 </div>
-            </section>
-            <section className="room-extrass">  
-                <h6>Включено</h6>
-                <ul className="extrass">
-                    {extras.map((item, index) => {
-                        return <li key={index}>- {item} </li>
-                    })}
-                </ul>
             </section>
             </>
         )
