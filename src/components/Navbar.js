@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import logo  from '../images/logo.svg'
 import {FaAlignRight} from 'react-icons/fa';
 import {Link} from 'react-router-dom'
+import Registration from '../pages/Registration'
 
 
 
@@ -45,6 +46,7 @@ export default class Navbar extends Component {
                         <li>
                              <Link to="/registration">Регистрация</Link>
                         </li>
+                       
                         
                         
 

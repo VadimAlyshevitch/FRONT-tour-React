@@ -5,12 +5,7 @@ import {FaCocktail, FaHiking, FaShuttleVan, FaBeer} from 'react-icons/fa'
 export default class Services extends Component {
     state = {
         servives : [
-            {
-                icon : <FaCocktail />,
-                title : "cotails",
-                info : "some info"
-                
-            },
+           
             {
                 icon : <FaHiking />,
                 title : "Hiking",
@@ -20,12 +15,6 @@ export default class Services extends Component {
             {
                 icon : <FaShuttleVan />,
                 title : "Shutt",
-                info : "some info"
-                
-            },
-            {
-                icon : <FaBeer />,
-                title : "Beer",
                 info : "some info"
                 
             }
