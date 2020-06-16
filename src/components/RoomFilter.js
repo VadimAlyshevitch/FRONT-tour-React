@@ -74,7 +74,7 @@ export default function RoomFilter({rooms}) {
 
                 {/* {фильтр по цене} */}
                 <div className="form-group">
-                    <label htmlFor="price">Стоимость ${price}</label>
+                    <label htmlFor="price">Стоимость {price}₽</label>
                     <input 
                     type="range" 
                     name="price" 

@@ -5,6 +5,7 @@ import Banner from '../components/Banner'
 import {Link} from 'react-router-dom'
 import {RoomContext} from '../context'
 import StyledHero from '../components/StyledHero'
+import StyledFooter from '../components/StyledFooter'
 
 export default class SingleRoom extends Component {
     constructor(props) {
@@ -43,7 +44,7 @@ export default class SingleRoom extends Component {
             <section className="single-room">
                 <div className="single-room-images">
                 {defaultImg.map((item, index) => {
-                   return <img key={index} src={item} alt={name} />
+                   return <img key={index} src={item} alt={name} title={name} className="PicturesInside"/>
                 })}
                 </div>
                 <div className="single-room-info">
@@ -60,14 +61,11 @@ export default class SingleRoom extends Component {
                             <h6> <b>Цена за сутки </b>: {size} рублей</h6>
                             
                             <h6> <b>Что посетить </b>: {breakfast }</h6>
-                            <h6> <b>Какие события</b> : {extras}</h6>
-                            
-                            
-                            
-                            
+                            <h6> <b>Какие события</b> : {extras}</h6>  
                         </article>
                 </div>
             </section>
+            <StyledFooter />
             </>
         )
         

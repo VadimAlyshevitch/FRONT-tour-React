@@ -62,7 +62,8 @@ export default class Registration extends Component{
         try {
           const response = await axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyCv5JM_Gfyl_rn_8zUYb0LrSazsnCQlDUE', authData)
     
-          console.log(response.data)
+          console.log(response.data);
+          alert(`Welcome `,response.data.emails)
         } catch (e) {
           console.log(e)
         }

@@ -1,6 +1,7 @@
 import roomSpa1 from "./images/Испания/pic1.jpg";
 import roomSpa2 from "./images/Испания/pic2.jpg";
 import roomSpa3 from "./images/Испания/pic3.jpg";
+import roomSpa0 from "./images/Испания/pic0.jpg";
 import roomSpa4 from "./images/Испания/pic4.jpeg";
 
 import roomIt1 from "./images/Италия/pic1.jpg";
@@ -143,7 +144,7 @@ export default [
         {
           fields: {
             file: {
-              url: img1
+              url: roomSpa0
             }
           }
         },

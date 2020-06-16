@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import Banner from '../components/Banner'
 import {Link} from 'react-router-dom'
 import RoomContainer from '../components/RoomContainer';
+import StyledFooter from '../components/StyledFooter'
 
 
 
@@ -256,63 +257,85 @@ getData(PROXY + CITY_API, (data) => {
 export default function Plane() {
     return (
         <>
-        <Hero hero="roomsHero" >
-           <Banner title='Спланировать свое путешествие' subtitle="Введите куда и откуда">
-                <Link to='/' className="btn-primary">На главную</Link>
-           </Banner>
-        </Hero>
+            <Hero hero="roomsHero" >
+              <Banner title='Спланировать свое путешествие' subtitle="Введите куда и откуда">
+                    <Link to='/' className="btn-primary">На главную</Link>
+              </Banner>
+            </Hero>
 
-        <main>
-  <section className="input-price wrapper">
-   
-  </section>
-  <section className="wrapper">
-    <form className="form-search">
-      <div className="wrapper__search">
-        <div className="input" style={{ display: "block" }}>
-          <label>
-            Откуда
-            <input type="text" className="input__cities-from" required />
-          </label>
-          <ul className="dropdown dropdown__cities-from" />
-        </div>
-        <div className="input">
-          <label>
-            Куда
-            <input type="text" className="input__cities-to" required />
-          </label>
-          <ul className="dropdown dropdown__cities-to" />
-        </div>
-        <div className="input input__cities-from">
-          <label>
-            Отправление
-            <input type="date" className="input__date-depart" required />
-          </label>
-        </div>
-      </div>
-      <div className="wrapper__button">
-        <button type="submit" className="button button__search btn-primary">
-          <span>Найти билеты</span>
-        </button>
-      </div>
-    </form>
-  </section>
-  <section className="wrapper">
-    <section
-      className="wrapper__ticket"
-      id="cheapest-ticket"
-      style={{ display: "none" }}
-    ></section>
-    <section
-      className="block__ticket"
-      id="other-cheap-tickets"
-      style={{ display: "none" }}
-    ></section>
-  </section>
-</main>;
+            <main>
+                <section className="wrapper">
+                  <form className="form-search">
+                    <div className="wrapper__search">
+                      <div className="input" style={{ display: "block" }}>
+                        <label>
+                          Откуда
+                          <input type="text" className="input__cities-from" required />
+                        </label>
+                        <ul className="dropdown dropdown__cities-from" />
+                      </div>
+                      <div className="input">
+                        <label>
+                          Куда
+                          <input type="text" className="input__cities-to" required />
+                        </label>
+                        <ul className="dropdown dropdown__cities-to" />
+                      </div>
+                      <div className="input input__cities-from">
+                        <label>
+                          Отправление
+                          <input type="date" className="input__date-depart" required />
+                        </label>
+                      </div>
+                    </div>
+                    <div className="wrapper__button">
+                      <button type="submit" className="button button__search btn-primary">
+                        <span>Найти билеты</span>
+                      </button>
+                    </div>
+                  </form>
+                </section>
+                <section className="wrapper">
+                  <section
+                    className="wrapper__ticket"
+                    id="cheapest-ticket"
+                    style={{ display: "none" }}
+                  ></section>
+                  <section
+                    className="block__ticket"
+                    id="other-cheap-tickets"
+                    style={{ display: "none" }}
+                  ></section>
+                </section>
+      {/* <div>
+        <h3 className="agent">{data.gate}</h3>
+          <div className="ticket__wrapper">
+              <div className="left-side">
+                  <a href="${getLinkAviasales(data)}" target="_blank" className="button button__buy">Купить
+                      за&nbsp;{data.value}₽</a>
+                </div>
+              <div className="right-side">
+                  <div className="block-left">
+                      <div className="city__from">Вылет из города
+                          <span className="city__name">{getNameCity(data.origin)}</span>
+                        </div>
+                      <div className="date">{getDate(data.depart_date)}</div>
+                    </div>
+                  <div className="block-right">
+                      <div className="changes">{getChanges(data.number_of_changes)}</div>
+                        <div className="city__to">Город назначения:
+                          <span className="city__name">{getNameCity(data.destination)}</span>
+                        </div>
+                        </div>
+                    </div>
+              </div>
+      </div> */}
 
 
-        
+
+              </main>;
+
+              <StyledFooter /> 
         </>
     )
 }

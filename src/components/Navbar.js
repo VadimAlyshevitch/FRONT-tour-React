@@ -22,9 +22,7 @@ export default class Navbar extends Component {
             <nav className="navbar">
                 <div className="nav-center">
                     <div className="nav-header">
-                        <Link to="/" >
-                            <img src={logo} alt="real"/>
-                        </Link>
+                       
                         <button 
                         type="button" 
                         className="nav-btn" 
@@ -46,6 +44,7 @@ export default class Navbar extends Component {
                         <li>
                              <Link to="/registration">Регистрация</Link>
                         </li>
+                        
                        
                         
                         
