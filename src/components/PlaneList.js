@@ -1,5 +1,5 @@
 import React from 'react'
-import Room from './Room'
+import Room from './Plane'
 
 export default function RoomsList({rooms}) {
     if(rooms.lenght === 0) {

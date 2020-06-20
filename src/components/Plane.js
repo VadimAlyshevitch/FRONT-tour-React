@@ -14,7 +14,7 @@ export default function Room({room}) {
                 
             </div>
 
-            <Link to={`/rooms/${slug}`} className="btn-primary room-link" > Подробнее </Link>
+            <Link to={`/shablons/${slug}`} className="btn-primary room-link" > Подробнее </Link>
         </div>
 
         <p className="room-info">{name}</p>

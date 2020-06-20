@@ -2,11 +2,11 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar'
 import Home from './pages/Home';
-import Rooms from './pages/Rooms';
-import SingleRoom from './pages/SingleRoom';
+import Shablons from './pages/Shablons';
+import SingleRoom from './pages/SingleShablons';
 import Errore from './pages/Errore'
 import {Route, Switch} from 'react-router-dom';
-import Plane from './pages/Plane';
+import Plane from './pages/PlaneCreate';
 import Registration from './pages/Registration';
 
 
@@ -23,10 +23,10 @@ function App() {
     <Navbar />
     <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/rooms/" component={Rooms} />
-        <Route exact path="/rooms/:slug" component={SingleRoom} />
-        <Route exact path="/plane" component={Plane} />
-        <Route exact path="/registration" component={Registration} />
+        <Route exact path="/shablons/" component={Shablons} />
+        <Route exact path="/shablons/:slug" component={SingleRoom} />
+        <Route exact path="/plane/" component={Plane} />
+        <Route exact path="/registration/" component={Registration} />
         <Route component={Errore} />
     </Switch>
     </>
