@@ -46,7 +46,8 @@ export default class Registration extends Component{
         }
         try {
           const response = await axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCv5JM_Gfyl_rn_8zUYb0LrSazsnCQlDUE', authData)
-    
+          localStorage.email = response.data.email
+          debugger
           console.log(response.data)
         } catch (e) {
           console.log(e)

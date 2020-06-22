@@ -232,9 +232,14 @@ export default function Plane() {
                             <div className="block-right">
                                   <div className="changes">{ getChanges(bestTicket.number_of_changes) }</div>
                                   <div className="city__to">Город назначения:
-                                  <span className="city__name">{ getCityNameByCode(bestTicket.destination) }</span>
+                                    <span className="city__name">{ getCityNameByCode(bestTicket.destination) }</span>
                                   </div>
+
+                                  <div className="city__to">
+                                  <p>Отель: Hotel</p>
                                   </div>
+                                  
+                            </div>
                               </div>
                         </div>
                 </div>
@@ -249,7 +254,7 @@ export default function Plane() {
                             </div>
                           <div className="right-side">
                               <div className="block-left">
-                                  <div className="city__from">Вылет из города
+                                  <div className="city__from">Вылет из города: 
                                     <span className="city__name">{ getCityNameByCode(ticket.origin) }</span>
                                   </div>
                                   <div className="date">{ formatDate(ticket.depart_date) }</div>

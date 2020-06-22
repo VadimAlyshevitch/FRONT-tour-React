@@ -6,6 +6,10 @@ import {Link} from 'react-router-dom'
 import {RoomContext} from '../context'
 import StyledHero from '../components/StyledHero'
 import StyledFooter from '../components/StyledFooter'
+import axios from 'axios'
+import mailJet from 'node-mailjet'
+
+const Email = window.Email
 
 export default class SingleRoom extends Component {
     constructor(props) {
@@ -21,6 +25,23 @@ export default class SingleRoom extends Component {
     // componentDidMount() {
 
     // }
+
+    toMail = async (email) => {
+        debugger
+        const {getRoom} = this.context;
+        const room = getRoom(this.state.slug);
+        const {name, description, capacity, size,price, extras, breakfast, pets, images} = room;
+
+        const response = await axios.post('http://localhost:3001/send', {
+            from: 'vadimpwnz228@gmail.com',
+            to: localStorage.email,
+            title: 'Вы сохранили кое-что',
+            body: `Имя: ${name}, описание: ${description}`,
+        })
+
+        debugger
+    };
+    
     render() {
         const {getRoom} = this.context;
         const room = getRoom(this.state.slug);
@@ -51,7 +72,8 @@ export default class SingleRoom extends Component {
                     <article className="desc">
                         <h3>Подробнее</h3>
                         <p>{description}</p>
-                        </article>
+                        <button className="btn-primary btn-in-info" onClick={this.toMail}>Сохранить</button>
+                    </article>
                         <article className="info">
                             <h3>Инфо</h3>
                             <h6><b>Итого</b> : {price} рублей</h6>

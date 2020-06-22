@@ -20,7 +20,7 @@ body {
   padding-top: 66px;
   color: var(--mainBlack);
   background: var(--mainWhite);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Roboto, sans-serif;
   line-height: 1.4;
 }
 h1 {
@@ -110,7 +110,7 @@ h6 {
 }
 .nav-icon {
   font-size: 1.5rem;
-  color: var(--primaryColor);
+  color: var(--mainBlack);
 }
 .nav-links {
   height: 0;
@@ -354,7 +354,7 @@ h6 {
   transform: translate(-50%, -50%) scale(1);
 }
 .room-info {
-  background: var(--darkGrey);
+  /* background: var(--darkGrey); */
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
@@ -585,8 +585,8 @@ input {
 
 .dropdown {
   width: 100%;
-  background: #fff;
-  color: #000;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--mainWhite);
   max-height: 300px;
   overflow-x: hidden;
 }
@@ -600,10 +600,11 @@ input {
   justify-content: space-between;
   padding: 5px 15px;
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .dropdown__city:hover {
-  color: #d84d00;
+  border: 1px solid var(--primaryColor);
 }
 .left-side,
 .right-side {
@@ -667,6 +668,7 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  
 }
 
 .agent {
@@ -822,4 +824,13 @@ input {
 .PicturesInside {
   height: 220px;
   width: 220px;
+}
+
+.btn-in-info {
+  margin: 20px auto;
+  display: flex;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  padding: 15px 15px 10px 45px;
 }
