@@ -127,7 +127,7 @@ export default [
     fields: {
       name: "Эконом Мадрид",
       slug: "single-economy",
-      type: "single",
+      type: "euro",
       price: 36828,
       size: 6828,
       capacity: 1,
@@ -179,7 +179,7 @@ export default [
     fields: {
       name: "Флоренция за 1 день",
       slug: "single-basic",
-      type: "single",
+      type: "euro",
       price: 52383,
       size: 2383,
       capacity: 1,
@@ -258,8 +258,8 @@ export default [
     fields: {
       name: "Москва",
       slug: "single-standard",
-      type: "single",
-      price: 3000,
+      type: "euro-russia",
+      price: 13000,
       size: 3000,
       capacity: 1,
       pets: 'Azimut',
@@ -338,8 +338,8 @@ export default [
     fields: {
       name: "Золотое кольцо России",
       slug: "single-deluxe",
-      type: "double",
-      price: 5000,
+      type: "euro-russia",
+      price: 25000,
       size: 3500,
       capacity: 2,
       pets: 'Старая Гостиница Лавры (Сергиев Посад) - ibis Ярославль Центр (Ярославь) - Отель Рай (Иваново) - Русская Деревня (Владимир)',
@@ -389,8 +389,8 @@ export default [
     fields: {
       name: "СЕМЬ ЕВРОПЕЙСКИХ СТОЛИЦ (Эконом)",
       slug: "double-economy",
-      type: "double",
-      price: 6800,
+      type: "euro-economy",
+      price: 63000,
       size: 30000,
       capacity: 4,
       pets: [
@@ -467,8 +467,8 @@ export default [
     fields: {
       name: "Сочи семейный отдых",
       slug: "family-economy",
-      type: "family",
-      price: 23300,
+      type: "euro-russian-family",
+      price: 43300,
       size: 4004,
       capacity: 3,
       pets: 'Роза Ветров',
@@ -532,8 +532,8 @@ export default [
     fields: {
       name: "Прибалтика на двоих",
       slug: "double-basic",
-      type: "double",
-      price: 250,
+      type: "euro",
+      price: 49003,
       size: 23469,
       capacity: 2,
       pets: 'Radisson Hotel Old Town Riga',
@@ -611,8 +611,8 @@ export default [
     fields: {
       name: "Япония",
       slug: "double-standard",
-      type: "double",
-      price: 300,
+      type: "asia",
+      price: 100000,
       size: 1781,
       capacity: 2,
       pets: '&AND HOSTEL KURAMAE WEST (Токио)',
@@ -690,8 +690,8 @@ export default [
     fields: {
       name: "Китай",
       slug: "double-deluxe",
-      type: "double",
-      price: 400,
+      type: "asia",
+      price: 70000,
       size: 3939,
       capacity: 2,
       pets: 'Hotel Kapok Beijing (Пекин)',
@@ -749,8 +749,8 @@ export default [
     fields: {
       name: "Скандинавия",
       slug: "family-basic",
-      type: "family",
-      price: 350,
+      type: "euro",
+      price: 77000,
       size: 3199,
       capacity: 4,
       pets: 'Hotel Birger Jarl',
@@ -828,8 +828,8 @@ export default [
     fields: {
       name: "Семейный Нью-Йорк",
       slug: "family-standard",
-      type: "family",
-      price: 400,
+      type: "usa-family",
+      price: 320000,
       size: 29725,
       capacity: 5,
       pets: 'Arlo SoHo',
@@ -907,8 +907,8 @@ export default [
     fields: {
       name: "Лас-Вегас",
       slug: "family-deluxe",
-      type: "family",
-      price: 500,
+      type: "usa-deluxe",
+      price: 190000,
       size: 9820,
       capacity: 6,
       pets: 'Bellagio',
@@ -1000,8 +1000,8 @@ export default [
     fields: {
       name: "Лос-Анджелес",
       slug: "presidential-room",
-      type: "presidential",
-      price: 600,
+      type: "usa-deluxe",
+      price: 230000,
       size: 6546,
       capacity: 10,
       pets: 'Hilton Los Angeles Airport',

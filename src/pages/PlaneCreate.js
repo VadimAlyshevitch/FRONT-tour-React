@@ -198,7 +198,7 @@ export default function Plane() {
                     </div>
                     <div className="wrapper__button">
                       <button type="submit" className="button button__search btn-primary">
-                        <span>Найти билеты</span>
+                        <span>START</span>
                       </button>
                     </div>
                   </form>
@@ -220,7 +220,7 @@ export default function Plane() {
                   <h3 className="agent">{ bestTicket.gate }</h3>
                     <div className="ticket__wrapper">
                         <div className="left-side">
-                            <a href={getLinkAviasales(bestTicket)} target="_blank" className="button button__buy">Купить за&nbsp;{ bestTicket.value }₽</a>
+                            <a href={getLinkAviasales(bestTicket)} target="_blank" className="button button__buy">&nbsp;{ bestTicket.value }₽</a>
                           </div>
                         <div className="right-side">
                             <div className="block-left">
@@ -236,7 +236,9 @@ export default function Plane() {
                                   </div>
 
                                   <div className="city__to">
-                                  <p>Отель: Hotel</p>
+                                  <p>Отель: Madrid House</p>
+                                  <p>Цена за сутки: 3106</p>
+                                  <p>Что посетить: Действуют Государственные Ограничения Для Путешественников, Связанные С Эпидемией Коронавирусной Инфекции COVID-19.</p>
                                   </div>
                                   
                             </div>
@@ -244,13 +246,13 @@ export default function Plane() {
                         </div>
                 </div>
                 }
-                {
+                { /*
                   (tickets || []).filter((e, i) => i < MAX_COUNT).map(ticket => {
                     return <div>
                     <h3 className="agent">{ ticket.gate }</h3>
                       <div className="ticket__wrapper">
                           <div className="left-side">
-                              <a href={getLinkAviasales(ticket)} target="_blank" className="button button__buy">Купить за&nbsp;{ ticket.value }₽</a>
+                              <a href={getLinkAviasales(ticket)} target="_blank" className="button button__buy">&nbsp;{ ticket.value }₽</a>
                             </div>
                           <div className="right-side">
                               <div className="block-left">
@@ -269,7 +271,7 @@ export default function Plane() {
                           </div>
                   </div>
                   })
-                }
+                */ }
               </main>;
 
               <StyledFooter /> 

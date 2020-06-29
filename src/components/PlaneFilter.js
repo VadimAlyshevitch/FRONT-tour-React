@@ -58,7 +58,7 @@ export default function RoomFilter({rooms}) {
                 {/* END Выбрать тип */}
                   {/* START Выбрать количество */}
                   <div className="form-group">
-                    <label htmlFor="capacity">Сколько людей</label>
+                    <label htmlFor="capacity">Сколько дней</label>
                     <select 
                     name="capacity" 
                     id="capacity" 
