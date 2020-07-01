@@ -119,7 +119,7 @@ export default function Plane() {
                         const bestTicket = best_prices.filter(item => item.depart_date === date)[0]
                         setBestTicket(bestTicket)
                         setTickets(best_prices.filter(item => item !== bestTicket))
-                        debugger
+                        
                       })
                   
                   }}>
@@ -220,7 +220,7 @@ export default function Plane() {
                   <h3 className="agent">{ bestTicket.gate }</h3>
                     <div className="ticket__wrapper">
                         <div className="left-side">
-                            <a href={getLinkAviasales(bestTicket)} target="_blank" className="button button__buy">&nbsp;{ bestTicket.value }₽</a>
+                            <a href={getLinkAviasales(bestTicket)} target="_blank" className="button button__buy">&nbsp;{ bestTicket.value + 1000}₽</a>
                           </div>
                         <div className="right-side">
                             <div className="block-left">

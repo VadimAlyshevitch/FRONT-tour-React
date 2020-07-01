@@ -675,6 +675,7 @@ input {
   padding: 5px;
   text-align: center;
   border-bottom: 1px solid black;
+  display: none;
 }
 
 .block-left,
@@ -691,9 +692,9 @@ input {
   justify-content: space-between;
 }
 
-.block-right {
+/* .block-right {
   text-align: right;
-}
+} */
 
 .city__name {
   font-size: 18px;
