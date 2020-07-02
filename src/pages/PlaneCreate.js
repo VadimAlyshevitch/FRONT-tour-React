@@ -200,6 +200,7 @@ export default function Plane() {
                       <button type="submit" className="button button__search btn-primary">
                         <span>START</span>
                       </button>
+                      <button className="btn-primary btn-in-info" onClick={window.print}>Напечатать</button>
                     </div>
                   </form>
                 </section>
@@ -244,6 +245,7 @@ export default function Plane() {
                             </div>
                               </div>
                         </div>
+                        
                 </div>
                 }
                 { /*

@@ -73,6 +73,7 @@ export default class SingleRoom extends Component {
                         <h3>Подробнее</h3>
                         <p>{description}</p>
                         <button className="btn-primary btn-in-info" onClick={this.toMail}>Сохранить</button>
+                        <button className="btn-primary btn-in-info" onClick={window.print}>Напечатать</button>
                     </article>
                         <article className="info">
                             <h3>Инфо</h3>
