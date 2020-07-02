@@ -196,9 +196,9 @@ export default function Plane() {
                         </label>
                       </div>
                     </div>
-                    <div className="wrapper__button">
-                      <button type="submit" className="button button__search btn-primary">
-                        <span>START</span>
+                    <div className="wrapper__button buttons-plane">
+                      <button type="submit" className="btn-primary btn-in-info">
+                        Получить
                       </button>
                       <button className="btn-primary btn-in-info" onClick={window.print}>Напечатать</button>
                     </div>
@@ -221,25 +221,25 @@ export default function Plane() {
                   <h3 className="agent">{ bestTicket.gate }</h3>
                     <div className="ticket__wrapper">
                         <div className="left-side">
-                            <a href={getLinkAviasales(bestTicket)} target="_blank" className="button button__buy">&nbsp;{ bestTicket.value + 1000}₽</a>
+                           <h3> Итого:&nbsp;<a href={getLinkAviasales(bestTicket)} target="_blank" className="button button__buy">&nbsp;{ bestTicket.value + Number(3106)}&nbsp;₽</a></h3>
                           </div>
                         <div className="right-side">
                             <div className="block-left">
-                                <div className="city__from">Вылет из города
+                                <div className="city__from">Из города:&nbsp;
                                   <span className="city__name">{ getCityNameByCode(bestTicket.origin) }</span>
                                 </div>
                                 <div className="date">{ formatDate(bestTicket.depart_date) }</div>
                               </div>
                             <div className="block-right">
                                   <div className="changes">{ getChanges(bestTicket.number_of_changes) }</div>
-                                  <div className="city__to">Город назначения:
+                                  <div className="city__to">Город назначения:&nbsp;
                                     <span className="city__name">{ getCityNameByCode(bestTicket.destination) }</span>
                                   </div>
 
                                   <div className="city__to">
-                                  <p>Отель: Madrid House</p>
-                                  <p>Цена за сутки: 3106</p>
-                                  <p>Что посетить: Действуют Государственные Ограничения Для Путешественников, Связанные С Эпидемией Коронавирусной Инфекции COVID-19.</p>
+                                  <p>Отель: <a href="https://www.booking.com/hotel/es/madrid-house-rooms-gay-hostel-in-chueca.ru.html?aid=1288319;label=metagha-link-localuniversalRU-hotel-17320_dev-desktop_los-1_bw-32_dow-Monday_defdate-1_room-0_lang-ru_curr-RUB_gstadt-2_rateid-0_aud-0_cid-_gacid-6642513798_mcid-10;sid=bafa0cb8f4ce00f0807dd858707cd317;all_sr_blocks=1732002_265571154_0_0_0;checkin=2020-08-03;checkout=2020-08-04;dest_id=-390625;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=1732002_265571154_0_0_0;hpos=1;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=1732002_265571154_0_0_0__7000;srepoch=1593706389;srpvid=6f43720a46d400a9;type=total;ucfs=1&">Madrid House</a></p>
+                                  <p>Цена за сутки: 3106 ₽</p>
+                                  <p><b>Что посетить: Действуют Государственные Ограничения Для Путешественников, Связанные С Эпидемией Коронавирусной Инфекции COVID-19.</b></p>
                                   </div>
                                   
                             </div>

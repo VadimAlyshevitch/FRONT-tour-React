@@ -539,6 +539,8 @@ h6 {
 
 .wrapper__button {
   margin-top: 50px;
+  display: flex;
+  flex-flow: column;
 }
 
 .wrapper__search .input {
@@ -628,17 +630,17 @@ input {
 }
 
 .right-side {
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  border-left: 1px solid black;
+  border-left: 1px solid black; */
 }
 
 .button__buy {
-  font-size: 16px;
+  /* font-size: 16px; */
   max-width: 166px;
   line-height: 1.25;
   padding-top: 5px;
@@ -665,9 +667,9 @@ input {
 }
 
 .ticket__wrapper {
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: flex; */
   
 }
 
@@ -834,4 +836,14 @@ input {
   width: 200px;
   text-align: center;
   padding: 15px 15px 10px 45px;
+}
+
+@media print {
+  .nav-btn,
+  .roomsHero,
+  .btn-primary,
+  .btn-in-info,
+  .single-room-images {
+    display: none;
+  }
 }
